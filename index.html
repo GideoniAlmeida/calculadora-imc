@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <body style="background-color: #EEE;">
+
+        <nav class="navbar navbar-dark bg-success">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    Calculadora de IMC
+                </a>
+            </div>
+        </nav>
+        <div class="container mt-3 p-5" style="background-color: #fff;">
+            <form action="#">
+                <div class="row mb-3">
+                    <div class="col-md-3 mb-3">
+                        <label for="altura" class="form-label">Altura (ex.: 1,70)</label>
+                        <input type="text" class="form-control" id="altura">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="peso" class="form-label">Peso (ex.: 69,2)</label>
+                        <input type="number" class="form-control" id="peso">
+                    </div>
+                </div>
+
+                <div class="row justify-content-around justify-content-md-start ms-md-0">
+                    <button type="submit" id="btn-calcular" class="btn btn-success col-md-2 col-xl-1 col-5 me-3">Calcular</button>
+                    <button type="submit" id="btn-limpar" class="btn btn-secondary col-md-2 col-xl-1 col-5">Limpar</button>
+                </div>
+            </form>
+
+            <div id="resultado" class="alert alert-info mt-3" role="alert">
+                O seu IMC é --
+            </div>
+
+            <table id="tabela" class="table table-bordered mt-3">
+
+                <thead>
+                    <tr class="bg-light text-dark">
+                        <td colspan="3">Veja a interpretação do IMC</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="text-success fw-bold">
+                        <td>IMC</td>
+                        <td>Classificação</td>
+                        <td style="text-align: center">Obesidade <small>(grau)</small></td>
+                    </tr>
+
+                    <tr id="result_calc_0">
+                        <td>Menor que 18,5</td>
+                        <td>Magreza</td>
+                        <td style="text-align: center">0</td>
+                    </tr>
+
+                    <tr id="result_calc_1">
+                        <td>Entre 18,5 e 24,9</td>
+                        <td>Normal</td>
+                        <td style="text-align: center">0</td>
+                    </tr>
+
+                    <tr id="result_calc_2">
+                        <td>Entre 25,0 e 29,9</td>
+                        <td>Sobrepeso</td>
+                        <td style="text-align: center">I</td>
+                    </tr>
+
+                    <tr id="result_calc_3">
+                        <td>Entre 30,0 e 39,9</td>
+                        <td>Obesidade</td>
+                        <td style="text-align: center">II</td>
+                    </tr>
+
+                    <tr id="result_calc_4">
+                        <td>Maior que 40,0</td>
+                        <td>Obesidade Grave</td>
+                        <td style="text-align: center">III</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+        
+        <script src="//unpkg.com/vanilla-masker@1.1.1/lib/vanilla-masker.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
